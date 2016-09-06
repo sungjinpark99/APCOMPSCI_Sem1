@@ -1,0 +1,40 @@
+Sungjin Park
+Robinette
+AP CompSci Period 2
+September 1, 2016
+						Lesson 1 Notes
+
+•	Rename saved Note Pad ++ file to java by changing its name to firstProg.java. 
+•	Drop it in as a new tab.
+{
+          public static void main(String[]args)
+          {
+      		System.out.println(“Hello World”);
+           }
+}
+•	Install NppExec by going to plugins. Install this to compile and execute the programs.
+
+•	Compile Code:
+//Save the file
+NVP_SAVE
+
+//change to the current directory
+cd “$(CURRENT_DIRECTORY)”
+
+//tell notepad++ where Java is
+C\ProgramFiles\Java\jdk1.8.0_05\bin\javac$(FileName).
+
+
+•	Execute Code:
+//Save the file
+NVP_SAVE
+
+//change to the current directory
+cd “$(CURRENT_DIRECTORY)”
+
+//tell notepad++ where Java is
+C\ProgramFiles\Java\jdk1.8.0_05\bin\javac$(Name_Part).
+
+•	Compile the file using NppExecCompile
+
+•	After there are no errors, use NppExecExecute to run the files.
