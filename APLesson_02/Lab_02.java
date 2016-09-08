@@ -19,7 +19,7 @@ public class Lab_02
 		int l = 5;
 		int w = 13;
 		int h = 23;
-		int RecCubeSA = l * w * h;
+		int RecCubeSA = (2*l*w + 2*w*h + 2*l*h);
 		
 		System.out.println( "The surface area of your rectangle is" + " " + RecCubeSA);
 	}
