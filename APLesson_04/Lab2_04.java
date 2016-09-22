@@ -14,17 +14,17 @@ public class Lab2_04
 		
 		System.out.println("Enter your title:");
 		String item3 = keyboard.next();
+		String space = keyboard.nextLine();
 		
 		System.out.println("Enter the school site:");
 		String item4 = keyboard.nextLine();
-		String space = keyboard.nextLine();
 		
 		System.out.println("Enter the school year:");
 		String item5 = keyboard.next();
+		String space2 = keyboard.nextLine();
 		
 		System.out.println("What is your subject:");
 		String item6 = keyboard.nextLine();
-		String space2 = keyboard.nextLine();
 		
 		
 		Lab2_04 form = new Lab2_04();
@@ -49,6 +49,6 @@ public class Lab2_04
 	}
 	public void format(String name, String thing)
 	{
-		System.out.printf("\n*%10s  %10s *",name, thing);
+		System.out.printf("\n*%13s  %11s  *",name, thing);
 	}
 }
