@@ -8,7 +8,7 @@ public class Lab4_04
 		
 		Lab4_04 volBox = new Lab4_04();
 		
-		System.out.println("What is the lenth in inches?");
+		System.out.println("What is the length in inches?");
 		int length = keyboard.nextInt();
 		
 		System.out.println("What is the width in inches?");

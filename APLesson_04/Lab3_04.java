@@ -21,10 +21,10 @@ public class Lab3_04
 		int time = keyboard.nextInt();
 		
 		double CI = interest.compound(principal,rate,number,time);
-		System.out.printf("The compound interest is %10.2f\n", CI);
+		System.out.printf("Your total monthly payment is %10.2f\n", CI);
 	}
 	public double compound(int p, double r, int n, int t)
 	{
-		return Math.pow((1+r/n), n*t) * p;
+		return Math.pow((1+r/n), n*t) * p/12;
 	}
 }
