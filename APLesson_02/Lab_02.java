@@ -14,7 +14,9 @@ public class Lab_02
 		String forth = "92130";
 		String fifth = "CA";
 		
-		System.out.println(first + " " + second + " , " + third + " , " + fifth + " " + forth);
+		System.out.println(first);
+		System.out.println(second);
+		System.out.println(third + " " + fifth + ", " + forth);
 		
 		int l = 5;
 		int w = 13;
