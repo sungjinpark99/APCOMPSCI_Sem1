@@ -49,6 +49,6 @@ public class Lab2_04
 	}
 	public void format(String name, String thing)
 	{
-		System.out.printf("\n*%13s  %11s  *",name, thing);
+		System.out.printf("\n* %11s  %17s *",name, thing);
 	}
 }

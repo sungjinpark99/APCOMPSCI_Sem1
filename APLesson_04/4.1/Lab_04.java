@@ -8,21 +8,21 @@ public class Lab_04
 		
 		System.out.println("Please enter item 1:");
 		String item1 = keyboard.nextLine();
-		String space1 = keyboard.nextLine();
 		
 		System.out.println("Please enter the price:");
 		double price1 = keyboard.nextDouble();
 		
+		String space3 = keyboard.nextLine();
 		System.out.println("Please enter item 2:");
 		String item2 = keyboard.nextLine();
-		String space3 = keyboard.nextLine();
+		
 	
 		System.out.println("Please enter the price:");
 		double price2 = keyboard.nextDouble();
 		
+		String space4 = keyboard.nextLine();
 		System.out.println("Please enter item 3:");
 		String item3 = keyboard.next();
-		String space4 = keyboard.nextLine();
 	
 		System.out.println("Please enter price:");
 		double price3 = keyboard.nextDouble();
@@ -71,7 +71,7 @@ public class Lab_04
 	}
 	public void format(String name, double number)
 	{
-		System.out.printf("\n*%15s ....  %10.2f",name, number);
+		System.out.printf("\n*%20s ......   %5.2f",name, number);
 	}
 }
 
