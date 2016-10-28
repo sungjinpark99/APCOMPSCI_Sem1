@@ -23,25 +23,25 @@ public class BMI
 		
 		System.out.printf("Your BMI is %.2f", BMI);
 		System.out.println();
-		System.out.println("You are " + calcCondition);
+		System.out.println("You are " + condition);
 	}
 	
 	public static void calcCondition(double BMI)
 	{
 		
 		if (BMI >= 39.9)
-			return "Morbidly Obese";
+			condition = "Morbidly Obese";
 		if (BMI >= 35)
-			return  "Very Obese";
+			condition =  "Very Obese";
 		if (BMI >= 29.9)
-			return "Obese";
+			condition = "Obese";
 		if (BMI >=25)
-			return "Overweight";
+			condition = "Overweight";
 		if (BMI >=18.5)
-			return "Normal";
+			condition = "Normal";
 		else
 			condition = "Underweight";
 		
-		return condition;
+		
 	}
 }
