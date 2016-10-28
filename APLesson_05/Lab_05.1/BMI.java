@@ -4,6 +4,8 @@ public class BMI
 {
 	static double height;
 	static double weight;
+	static double BMI;
+	static String condition;
 	
 	public static void main(String[]args)
 	{
@@ -11,29 +13,34 @@ public class BMI
 		
 		System.out.println("What is your height?");
 		height = kb.nextDouble();
-		System.out.printlng("What is your weight?");
+		System.out.println("What is your weight?");
 		weight = kb.nextDouble();
 		
-		int BMI = (703 * Weight/ ( Height * Height));
 		
-		System.out.println("Your BMI is " + BMI);
+		
+		
+		BMI = (703 * weight/ ( height * height));
+		
+		System.out.printf("Your BMI is %.2f", BMI);
+		System.out.println();
 		System.out.println("You are " + calcCondition);
 	}
 	
-	public static void calcCondition(int BMI)
+	public static void calcCondition(double BMI)
 	{
+		
 		if (BMI >= 39.9)
-			return Morbidly_Obese;
+			return "Morbidly Obese";
 		if (BMI >= 35)
-			return Very_Obese;
+			return  "Very Obese";
 		if (BMI >= 29.9)
-			return Obese;
+			return "Obese";
 		if (BMI >=25)
-			return Overweight;
+			return "Overweight";
 		if (BMI >=18.5)
-			return Normal;
+			return "Normal";
 		else
-			condition = Underweight;
+			condition = "Underweight";
 		
 		return condition;
 	}
