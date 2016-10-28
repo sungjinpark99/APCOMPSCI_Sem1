@@ -20,11 +20,20 @@ public class Lab3_04
 		System.out.println("How many years wil you have the loan?");
 		int time = keyboard.nextInt();
 		
-		double CI = interest.compound(principal,rate,number,time);
-		System.out.printf("Your total monthly payment is %10.2f\n", CI);
+		double monthly = interest.month(principal,rate,number,time);
+		double total = interest.all(principal,rate,number,time);
+		
+		System.out.printf("Your total monthly payment is %10.2f\n", monthly);
+		System.out.printf("Your total payment is %10.2f\n", total);
 	}
-	public double compound(int p, double r, int n, int t)
+	
+	public double month(int p, double r, int n, int t)
 	{
-		return Math.pow((1+r/n), n*t) * p/12;
+		return p* Math.pow((1+r/n), n*t)/(12*t);
+	}
+	
+	public double all(int p, double r, int n, int t)
+	{
+		return p* Math.pow((1+r/n), n*t);
 	}
 }

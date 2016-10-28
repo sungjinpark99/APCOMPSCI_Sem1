@@ -71,7 +71,7 @@ public class Lab_04
 	}
 	public void format(String name, double number)
 	{
-		System.out.printf("\n*%20s ......   %5.2f",name, number);
+		System.out.printf("* %20s ......   %15.2f\n",name, number);
 	}
 }
 
