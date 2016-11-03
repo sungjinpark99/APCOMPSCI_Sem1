@@ -2,10 +2,8 @@ import java.util.Scanner;
 
 public class BMI
 {
-	static double height;
-	static double weight;
-	static double BMI;
 	static String condition;
+	static double weight, height, BMI;
 	
 	public static void main(String[]args)
 	{
@@ -17,27 +15,27 @@ public class BMI
 		weight = kb.nextDouble();
 		
 		
-		
-		
-		BMI = (703 * weight/ ( height * height));
-		
+		calcCondition();
 		System.out.printf("Your BMI is %.2f", BMI);
 		System.out.println();
 		System.out.println("You are " + condition);
+		
 	}
 	
-	public static void calcCondition(double BMI)
+	public static void calcCondition()
 	{
+		
+		BMI = (703 * weight/ ( height * height));
 		
 		if (BMI >= 39.9)
 			condition = "Morbidly Obese";
-		if (BMI >= 35)
+		else if (BMI >= 35)
 			condition =  "Very Obese";
-		if (BMI >= 29.9)
+		else if (BMI >= 29.9)
 			condition = "Obese";
-		if (BMI >=25)
-			condition = "Overweight";
-		if (BMI >=18.5)
+		else if (BMI >=25)
+			condition =  "Overweight";
+		else if (BMI >=18.5)
 			condition = "Normal";
 		else
 			condition = "Underweight";
