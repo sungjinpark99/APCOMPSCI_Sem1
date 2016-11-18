@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Song
 {
+	static int repeats;
+	static String lyrics; 
+	
 	public static void main(String[]args)
 	{
 		sing("Na",3);
@@ -9,11 +12,11 @@ public class Song
 		sing("Hey",2);
 		sing("Goodbye!",0);
 	}
-	public static void sing(String word, int num)
+	public static void sing(String lyrics, int repeats)
 	{
-		for(int i = 0; i<=num; i++)
+		for(int i = 0; i<=repeats; i++)
 		{
-			System.out.printf(word + " ");
+			System.out.printf(lyrics + " ");
 		}
 		System.out.println("");
 	}
