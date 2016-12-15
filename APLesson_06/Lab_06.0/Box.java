@@ -8,7 +8,7 @@ public class Box
 		String input = kb.next();
 		int number = input.length();
 		
-		for(int i = 0; 1 <= number -1; i++)
+		for(int i = 0; i <= number -1; i++)
 	{
 		System.out.println(input);
 	}
