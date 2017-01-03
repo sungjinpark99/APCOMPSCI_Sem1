@@ -1,24 +1,19 @@
 import java.util.Scanner;
 public class Notes
 {
-
-	static int digits = 0;
+	static String sentence;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter a number: ");
-		int number = kb.nextInt();
-		countDigits();
-		System.out.println(number + " has " + digits + " digits. ");
-	}
-	public static void countDigits()
-	{
-		int num = number;
-		while(num > 0)
+		System.out.println("Please enter a sentence: ");
+		sentence = kb.nextLine();
+		
+		while(sentence.indexOf(" ") >= 0)
 		{
-			digits += 1;
-			num /= 10;
+				sentence = sentence.substring(0, sentence.indexOf(" ")) + sentence.substring(sentence.indexOf(" ") + 1);
 		}
+		
+		System.out.println("Without spaces....." + sentence);
 	}
 }
