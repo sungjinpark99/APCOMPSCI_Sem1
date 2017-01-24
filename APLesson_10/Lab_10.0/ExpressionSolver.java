@@ -8,15 +8,10 @@ public class ExpressionSolver
 	{
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter an equation: ");
-		String eq = input.nextLine();
+		String expression = input.nextLine();
 
-		ArrayList<String>equation = new ArrayList<>(Arrays.asList(eq.split(" ")));
+		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
 
-		Functions(equation);
-	}
-
-	public static void Functions(ArrayList<String> equation)
-	{	
 		int i = 0;
 		while(i < equation.size())
 		{
