@@ -1,12 +1,12 @@
 public class StudentAdvance extends Advance
 {
-	public StudentAdvance()
-	{
-		super();
-	}
 	public StudentAdvance(int n)
 	{
 		super(n);
+	}
+	public StudentAdvance()
+	{
+		super();
 	}
 	public int getPrice()
 	{

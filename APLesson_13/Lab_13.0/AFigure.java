@@ -5,6 +5,11 @@ public class AFigure extends Toy
 		super();
 	}
 
+	public String toString()
+	{
+		return super.toString();
+	}
+	
 	public AFigure(String N)
 	{
 		super(N);
@@ -13,10 +18,5 @@ public class AFigure extends Toy
 	public String getType()
 	{
 		return "Action Figure";
-	}
-
-	public String toString()
-	{
-		return super.toString();
 	}
 }

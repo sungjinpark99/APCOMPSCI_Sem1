@@ -4,7 +4,12 @@ public class Car extends Toy
 	{
 		super();
 	}
-
+	
+	public String toString()
+	{
+		return super.toString();
+	}
+	
 	public Car(String N)
 	{
 		super(N);
@@ -13,10 +18,5 @@ public class Car extends Toy
 	public String getType()
 	{
 		return "Car";
-	}
-
-	public String toString()
-	{
-		return super.toString();
 	}
 }

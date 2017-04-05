@@ -1,15 +1,16 @@
 public class Advance extends TicketSuper
 {
 	public int DaysLeft;
-	public Advance()
-	{
-		super();
-		DaysLeft = 0;
-	}
+	
 	public Advance(int Days)
 	{
 		super();
 		DaysLeft = Days;
+	}
+	public Advance()
+	{
+		super();
+		DaysLeft = 0;
 	}
 	public int getDaysLeft()
 	{

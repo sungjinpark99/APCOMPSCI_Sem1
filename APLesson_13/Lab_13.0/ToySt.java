@@ -20,16 +20,16 @@ public class ToySt
 		{
 			String Name = Toys.get(i);
 			String Type = Toys.get(i+1);
-			Toy T = getToy(name);
+			Toy T = getToy(Name);
 			if (T == null)
 			{
-				if (type.equals("Car"))
+				if (Type.equals("Car"))
 				{
-					ToyList.add(new Car(name));
+					ToyList.add(new Car(Name));
 				}
-				else if (type.equals("AF"))
+				else if (Type.equals("AF"))
 				{
-					ToyList.add(new AFigure(name));
+					ToyList.add(new AFigure(Name));
 				}
 			}
 			else
@@ -51,17 +51,17 @@ public class ToySt
 	}
 	public String getMostFrequentToy()
 	{
-		StringName = "";
+		String Name = "";
 		int max = Integer.MIN_VALUE;
-		for(toy i : ToyList)
+		for(Toy i : ToyList)
 		{
 			if(max < i.getCount())
 			{
 				max = i.getCount();
-				name = i.getName();
+				Name = i.getName();
 			}
 		}
-		return name;
+		return Name;
 	}
 	public String getMostFrequentType()
 	{

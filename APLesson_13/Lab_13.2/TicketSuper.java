@@ -6,14 +6,12 @@ public abstract class TicketSuper
 	public TicketSuper()
 	{
 		Price = 0;
-		SerialNumber = (int)(Math.random() * 10000000);
+		SerialNumber = (int)(Math.random() * 100000);
 	}
-
 	public int getSerialNumber()
 	{
 		return SerialNumber;
 	}
-
 	public abstract int getPrice();
 	public String toString()
 	{
