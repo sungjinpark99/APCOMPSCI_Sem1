@@ -11,7 +11,7 @@ public class Honda implements Location
 	public int getID()
 	{
 		Random rng = new Random();
-		return 100000+rng.nextInt(900000);
+		return 10000+rng.nextInt(90000);
 	}
 	public void move(int x, int y)
 	{
