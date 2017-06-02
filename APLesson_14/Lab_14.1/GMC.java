@@ -1,26 +1,23 @@
 public class GMC extends Car
 {
-	private double x;
-	private double y;
+	private double a;
+	private double b;
 	
-	public GMC()
+	public GMC(double x, double y)
 	{
-		x = 0;
-		y = 0;
+		a += x;
+		b += y;
 	}
-	public GMC(double X, double Y)
+	
+	public void move(double x, double y)
 	{
-		x += X;
-		y += Y;
+		a += x;
+		b += y;
 	}
-	public void MOVE(double X, double Y)
+	
+	public double[] getLoc()
 	{
-		x += X;
-		y += Y;
-	}
-	public double[] getLocation()
-	{
-		double[] location = new double[] {x,y};
-		return location;
+		double[] loc = new double[] {a,b};
+		return loc;
 	}
 }

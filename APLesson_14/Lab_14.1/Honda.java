@@ -1,26 +1,21 @@
 public class Honda extends Car
 {
-	private double x;
-	private double y;
-	private double[] location;
+	public double[] loc;
 	
-	public Honda()
+	public Honda(double[]loc)
 	{
-		x = 0;
-		y = 0;
+		x = loc[0];
+		y = loc[1];
 	}
-	public Honda(double[]location)
+	
+	public void move(double x, double y)
 	{
-		x = location[0];
-		y = location[1];
+		loc[0] +=x;
+		loc[1] +=y;
 	}
-	public void MOVE(double X, double Y)
+	
+	public double[] getLoc()
 	{
-		x +=X;
-		y +=Y;
-	}
-	public double[] getLocation()
-	{
-		return location;
+		return loc;
 	}
 }

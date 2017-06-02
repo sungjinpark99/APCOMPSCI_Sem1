@@ -1,28 +1,23 @@
 import java.util.Arrays;
 public class Toyota extends Car
 {
-	private double[] Location;
-	private double x;
-	private double y;
+	private double[] loc;
+
+	public Toyota(String z)
+	{
+		String[] locs = z.split(", ");
+		loc[0] = Double.parseDouble(locS[0]);
+		loc[1] = Double.parseDouble(locS[1]);
+	}
 	
-	public Toyota()
+	public void move(double x, double y)
 	{
-		x = 0;
-		y = 0;
+		loc[0] += x;
+		loc[1] += y;
 	}
-	public Toyota(String i)
+	
+	public double[] getLoc()
 	{
-		String[] locs = i.split(", ");
-		x = Double.parseDouble(locs[0]);
-		y = Double.parseDouble(locs[1]);
-	}
-	public void MOVE(double X, double Y)
-	{
-		x += X;
-		y += Y;
-	}
-	public double[] getLocation()
-	{
-		return new double[] {x,y};
+		return loc
 	}
 }

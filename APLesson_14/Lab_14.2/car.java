@@ -1,19 +1,25 @@
 public class car implements Location
 {
-	double x;
-	double y;
+	public double[] location;
 	
-	private int ID = (int)(Math.random()*900000)+100000;
+	public final int ID = (int)(Math.random()*1000000) + 1;
+	
+	public Car()
+	{
+		location = new double[2]
+	}
 	
 	public double[] getLoc()
 	{
-		return new double[] {x,y};
+		return location;
 	}
+	
 	public void move(double X, double Y)
 	{
-		x += X;
-		y += Y;
+		location[0] = X;
+		location[1] = Y;
 	}
+	
 	public int getID()
 	{
 		return ID;
