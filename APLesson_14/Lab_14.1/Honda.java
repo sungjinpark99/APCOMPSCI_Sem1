@@ -2,10 +2,9 @@ public class Honda extends Car
 {
 	public double[] loc;
 	
-	public Honda(double[]loc)
+	public Honda(double[] x)
 	{
-		x = loc[0];
-		y = loc[1];
+		this.loc = x;
 	}
 	
 	public void move(double x, double y)

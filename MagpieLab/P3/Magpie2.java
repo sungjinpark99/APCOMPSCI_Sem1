@@ -75,7 +75,7 @@ public class Magpie2
 	private String transformIWantToStatement(String statement)
 	{
 		statement = statement.trim();
-		String lastChar = statement.charAt(statement.length()-1);
+		String lastChar = statement.substring(statement.length()-1);
 		
 		if(lastChar.equals("."))
 		{
@@ -91,7 +91,7 @@ public class Magpie2
 	private String transformYouMeStatement(String statement)
 	{
 		statement = statement.trim();
-		String lastChar = statement.charAt(statement.length()-1);
+		String lastChar = statement.substring(statement.length()-1);
 		
 		if(lastChar.equals("."))
 		{
@@ -109,7 +109,7 @@ public class Magpie2
 	private String transformIYouStatement(String statement)
 	{
 		statement = statement.trim();
-		String lastChar = statement.charAt(statement.length()-1);
+		String lastChar = statement.substring(statement.length()-1);
 		
 		if(lastChar.equals("."))
 		{
@@ -118,8 +118,8 @@ public class Magpie2
 		
 		int psnOfI = findKeyword(statement, "I");
 		
-		int psnOfYou = findKeyword(phrase, "you", psnOfI + 1);
-		String restOfStatement = phrase.substring(psnOfI + 1, psnOfYou).trim();
+		int psnOfYou = findKeyword(statement, "you", psnOfI + 1);
+		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
 		
 		return "Why do you " + restOfStatement + " me?";
 	}

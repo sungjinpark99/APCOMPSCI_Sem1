@@ -6,9 +6,9 @@ public class Satellite
    {
        ArrayList<Location> Locate = new ArrayList<>();
        double[] HonLoc = {5, 6};
-       locate.add(new Honda(HonLoc));
-       locate.add(new Toyota("8, 9"));
-       locate.add(new GMC(3, 8));
+       Locate.add(new Honda(HonLoc));
+       Locate.add(new Toyota("8, 9"));
+       Locate.add(new GMC(3, 8));
 
         double[] Home = {0, 0};
 

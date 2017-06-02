@@ -5,9 +5,10 @@ public class Toyota extends Car
 
 	public Toyota(String z)
 	{
-		String[] locs = z.split(", ");
-		loc[0] = Double.parseDouble(locS[0]);
-		loc[1] = Double.parseDouble(locS[1]);
+		String[] locS = z.split(", ");
+		loc = new double[2];  
+		this.loc[0] = Double.parseDouble(locS[0]);
+		this.loc[1] = Double.parseDouble(locS[1]);
 	}
 	
 	public void move(double x, double y)
@@ -18,6 +19,6 @@ public class Toyota extends Car
 	
 	public double[] getLoc()
 	{
-		return loc
+		return loc;
 	}
 }

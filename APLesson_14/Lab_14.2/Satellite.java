@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-public class satellite
+public class Satellite
 {
    public static void main(String[]args)
    {
        ArrayList<Location> Locate = new ArrayList<>();
        double[] HondaLoc = {5, 6};
-       locate.add(new Honda(HondaLoc));
-       locate.add(new Toyota("8, 9"));
-       locate.add(new GMC(3, 8));
+       Locate.add(new Honda(HondaLoc));
+       Locate.add(new Toyota("8, 9"));
+       Locate.add(new GMC(3, 8));
 
         double[] Home = {0, 0};
 
