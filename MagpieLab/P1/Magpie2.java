@@ -11,6 +11,7 @@ public class Magpie2
 	 * 	Gives a response to a user statement
 	 *  @param statement (the user statement)
 	 * 	@return a response based on the rules given */
+	 
 	public String getResponse(String statement)
 	{
 		String response = "";
@@ -21,11 +22,16 @@ public class Magpie2
 		 * 	if you enter nothing, or if you accidentally hit
 		 * 	enter. Think to yourself: "What is the length of
 		 * 	an empty String?" */
-
+		 
+		if (statement.length() == 0)
+		{
+			response = "Say something, Please.";
+		}
 
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
+		 
 		if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
@@ -39,6 +45,24 @@ public class Magpie2
 			response = "Tell me more about your family.";
 		}
 
+		else if (findKeyword(statement,"cat")>=0
+				|| findKeyword(statement,"dog")>=0
+				|| findKeyword(statement,"fish")>=0
+				|| findKeyword(statement,"turtle")>=0)
+		{
+			response = "Tell me more about your pet.";	
+		}
+		
+		else if (findKeyword(statement,"Robinette")>=0)
+		{
+			response="He sounds like a pretty danky dank teacher.";
+		}
+		 
+		else if (statement.trim().length() == 0)
+		{
+			response = "Say something, Please.";
+		}
+		
 		/** Exercise_03(Final)
 		 * ==================================================
 		 * Create additional code (another else if) that
@@ -51,47 +75,66 @@ public class Magpie2
 		 * if you mention "Robinette" in your statement */
 
 		else
-		{
-			response = getRandomResponse();
+			{
+				response = getRandomResponse();
+			}
 		}
 		return response;
-	}
+	}	
 
 	/** Ex_02: The findKeyword() Method...
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
 	{
 		/* New String variable phrase = a more searchable version of statement.
-		 	-Use a combination of trim() and toLowerCase() modify statement.
+		 	-Use a combination of trim() and toLowerCase() modify statement. */
+			
+		String phrase = statement.toLowerCase().trim();
+		goal = goal.toLowerCase();
+		
+		/* New int variable psn = the location of goal in phrase after
+		   startPos. */
+		   
+		int psn = phrase.indexOf(goal, startPos);
+		
+		String before = " ";
+		String after = " ";
 
-		   New int variable psn = the location of goal in phrase after
-		   startPos
-
-			-->Refinement: Make sure we find goal by itself, and not part
-			of another word ("no" vs no in "know"). if you find an occurrence
-			of goal, make sure before and after aren't letters.
-
-			As long as psn >= 0...
-				Check if psn > 0 - there is no need to check for before at the
-				beginning of the word
-					set before = the slot in phrase before psn */
-
-				//====>code here
-
-				/*check if you can fit goal into the rest of phrase - no need to
+		while (psn >= 0)
+		{	
+			if (psn > 0)
+			{
+				before = String.valueOf(phrase.charAt(psn - 1));
+			}
+			
+			/*check if you can fit goal into the rest of phrase - no need to
 				proceed otherwise
 					set after = the slot in phrase after psn + length of goal */
+			
+			if (psn + goal.length() < phrase.length())
+			{
+				after = String.valueOf(phrase.charAt(psn + goal.length()));
+			}
+			
+			/* if before and after are not letters (compare before to "a"
+					and after to "z")*/
+			
+			if(((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) && (after.compareTo("a") < 0 || after.compareTo("z") > 0))
+			{
+				return psn;
+			}
+			
+			psn = phrase.indexOf(goal, psn + 1);
+		}
+		
+				/*Otherwise, search for goal in phrase from psn + 1 forward */
 
-				//=====> code here
-
-				/* if before and after are not letters (compare before to "a"
-					and after to "z")
-						--return psn
-
-				Otherwise, search for goal in phrase from psn + 1 forward */
-
+			else
+			{
+				psn = phrase.indexOf(goal, psn + 1);
+			}
+		}
 		return -1;
-
 	}
 
 	/** Override - this method is used if there are only 2 parameters...*/
