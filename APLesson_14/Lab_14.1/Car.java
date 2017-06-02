@@ -7,7 +7,7 @@ public abstract class Car implements Location
 		return ID;
 	}
 
-	public void move(double X, double Y)
+	public void move(double x, double y)
 	{
 			location[0] += X;
 			location[1] += Y;
