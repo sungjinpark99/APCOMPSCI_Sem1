@@ -82,6 +82,16 @@ public class IntArrayWorker
   /** 
    * fill the array with a pattern
    */
+   private int getColTotal(int[][] matrix, int col)
+   {
+	   int colTotal = 0;
+	  for (int[] rowArray : matrix)
+	  {
+		  colTotal += rowArray[col];
+	  }
+	  return colTotal;
+	}
+	
   public void fillPattern1()
   {
     for (int row = 0; row < matrix.length; row++)
@@ -97,6 +107,34 @@ public class IntArrayWorker
           matrix[row][col] = 3;
       }
     }
+  }
+  
+  private int getLargest(int[][] matrix)
+  {
+	  int largest = 0;
+	  for (int[] rowArray : matrix)
+	  {
+		  for (int item : rowArray)
+		  {
+			  if(largest > item)
+				  largest = item;
+		  }
+	  }
+	  return largest;
+  }
+  
+  private int getCount(int[][] matrix, int n)
+  {
+	  int count = 0;
+	  for (int[] rowArray : matrix)
+	  {
+		  for (int item: rowArray)
+		  {
+			  if(number == item)
+				  count +=1;
+		  }
+	  }
+	  return count;
   }
  
 }
