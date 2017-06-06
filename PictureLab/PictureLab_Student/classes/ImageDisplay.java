@@ -211,6 +211,5 @@ public class ImageDisplay extends JPanel implements Scrollable
         g.drawLine(leftX,downY,leftX,yEnd);
       
     }
-  }
-  
+  } 
 }
